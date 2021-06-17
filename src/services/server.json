@@ -1,0 +1,16 @@
+{
+    "test-db-name": [
+        {
+            "id": 1,
+            "name": "plant-test",
+            "info": {
+                "description": "sdasd",
+                "area": "sdasd",
+                "harvest": "sdasd",
+                "temperature": "sdasd"
+            },
+            "photo": "link",
+            "environments": ["living_room", "kitchen"]
+        }
+    ]
+}
