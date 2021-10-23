@@ -31,7 +31,7 @@ export function Welcome() {
                     activeOpacity={0.7}
                     onPress={handleStart}
                 >
-                    Fazer login
+                    <Text>Fazer login</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -39,7 +39,7 @@ export function Welcome() {
                     activeOpacity={0.7}
                     onPress={handleStart}
                 >
-                    Cadastrar-se
+                    <Text>Cadastrar-se</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
