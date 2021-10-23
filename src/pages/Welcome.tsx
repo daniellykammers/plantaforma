@@ -6,40 +6,33 @@ import {
     View,
     TouchableOpacity,
     Dimensions,
+    StatusBar,
 } from 'react-native';
 
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 import { useNavigation } from '@react-navigation/core';
+import { Cesta } from '../components/Cesta';
 
 export function Welcome() {
     const navigation = useNavigation();
 
     function handleStart() {
-        navigation.navigate('UserIdentification');
+        navigation.navigate('Home');
     }
 
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.wrapper}>
-                <Text style={styles.title}>
-                    Bem vindo ao plantaforma, a plataforma das suas plantinhas.
-                </Text>
-
+                <StatusBar />
+                <Cesta />
+                <Text style={styles.text}>O que vamos plantar hoje?!</Text>
                 <TouchableOpacity
                     style={styles.button}
                     activeOpacity={0.7}
                     onPress={handleStart}
                 >
-                    <Text>Fazer login</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity
-                    style={styles.button}
-                    activeOpacity={0.7}
-                    onPress={handleStart}
-                >
-                    <Text>Cadastrar-se</Text>
+                    <Text style={styles.buttonText}>Login</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
@@ -76,12 +69,21 @@ const styles = StyleSheet.create({
         height: Dimensions.get('window').width * 0.7,
     },
     button: {
-        backgroundColor: colors.body_light,
+        backgroundColor: colors.green_dark,
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 16,
         marginBottom: 10,
-        height: 56,
-        width: 56,
+        width: '80%',
+        padding: 16,
+    },
+    text: {
+        marginTop: 20,
+        fontSize: 20,
+    },
+    buttonText: {
+        color: colors.white,
+        fontSize: 20,
+        fontFamily: fonts.text,
     },
 });
