@@ -32,7 +32,7 @@ export function Welcome() {
                     activeOpacity={0.7}
                     onPress={handleStart}
                 >
-                    <Text style={styles.buttonText}>Login</Text>
+                    <Text style={styles.buttonText}>Next</Text>
                 </TouchableOpacity>
             </View>
         </SafeAreaView>
